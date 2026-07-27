@@ -1,6 +1,6 @@
-<H3>THARUNISH VASAN </H3>
-<H3>212224240174</H3>
-<H3>EX. NO.1</H3>
+<H3></H3>
+<H3></H3>
+<H3></H3>
 <H3>DATE</H3>
 <H1 ALIGN =CENTER> Introduction to Kaggle and Data preprocessing</H1>
 
@@ -37,57 +37,6 @@ STEP 5:Normalizing the data<BR>
 STEP 6:Splitting the data into test and train<BR>
 
 ##  PROGRAM:
-import pandas as pd
-
-from sklearn.preprocessing import StandardScaler
-
-from sklearn.preprocessing import MinMaxScaler
-
-from sklearn.model_selection import train_test_split
-
-df=pd.read_csv("2026_team_summaries.csv")
-
-print(df)
-
-df = df.drop('Country', axis=1)
-
-X=df.iloc[:, :-1].values
-
-print(X)
-
-y=df.iloc[:, -1].values
-
-print(y)
-
-print(df.isnull().sum())
-
-df.fillna(df.mean().round(1), inplace=True)
-
-print(df.isnull().sum())
-
-y=df.iloc[:, -1].values
-
-df.duplicated()
-
-print(df['2026_Average_Age'].describe())
-
-scaler=MinMaxScaler()
-
-df1=pd.DataFrame(scaler.fit_transform(df))
-
-print(df1)
-
-X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.2)
-
-print(X_train)
-
-print(len(X_train))
-
-print(X_test)
-
-print(len(X_test))
-
-
 
 
 
